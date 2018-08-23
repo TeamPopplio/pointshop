@@ -1,6 +1,8 @@
 local PANEL = {}
 
 local adminicon = Material("icon16/shield.png")
+local prisonericon = Material("otterjailbreak/prisoner16.png")
+local guardicon = Material("otterjailbreak/guard16.png")
 local equippedicon = Material("icon16/eye.png")
 local groupicon = Material("icon16/group.png")
 
@@ -66,7 +68,9 @@ end
 function PANEL:SetData(data)
 	self.Data = data
 	self.Info = data.Name
-	
+	if data.Team  then
+		self.Team = data.Team
+	end
 	if data.Model then
 		local DModelPanel = vgui.Create('DModelPanel', self)
 		DModelPanel:SetModel(data.Model)
@@ -140,8 +144,15 @@ end
 function PANEL:PaintOver()
 	if self.Data.AdminOnly then
 		surface.SetMaterial(adminicon)
-		surface.SetDrawColor(Color(255, 255, 255, 255))
 		surface.DrawTexturedRect(5, 5, 16, 16)
+	end
+
+	if self.Team == TEAM_PRISONER then
+		surface.SetMaterial(prisonericon)
+		surface.DrawTexturedRect(self:GetWide() - 5 - 16, self:GetTall() - self.InfoHeight - 5 - 16, 16, 16)
+	elseif self.Team == TEAM_GUARD then
+		surface.SetMaterial(guardicon)
+		surface.DrawTexturedRect(self:GetWide() - 5 - 16, self:GetTall() - self.InfoHeight - 5 - 16, 16, 16)
 	end
 	
 	if LocalPlayer():PS_HasItemEquipped(self.Data.ID) then

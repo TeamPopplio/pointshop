@@ -2,6 +2,7 @@ ITEM.Name = 'Super Small'
 ITEM.Price = 1000
 ITEM.Model = 'models/props_junk/garbage_glassbottle003a.mdl'
 ITEM.NoPreview = true
+ITEM.AdminOnly = true
 
 function ITEM:OnEquip(ply, modifications)
 	ply:SetModelScale(0.5, 1)

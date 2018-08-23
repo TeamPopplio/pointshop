@@ -1,6 +1,6 @@
-ITEM.Name = 'Kleiner'
-ITEM.Price = 150
-ITEM.Model = 'models/player/kleiner.mdl'
+ITEM.Name = 'Dr. Breen'
+ITEM.Price = 250
+ITEM.Model = 'models/player/breen.mdl'
 ITEM.Team = TEAM_PRISONER
 
 function ITEM:OnEquip(ply, modifications)

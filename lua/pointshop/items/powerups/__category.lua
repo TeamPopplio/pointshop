@@ -1,2 +1,4 @@
 CATEGORY.Name = 'Powerups'
-CATEGORY.Icon = 'star'
+CATEGORY.Icon = 'bomb'
+CATEGORY.AllowedEquipped = 1
+CATEGORY.Order = 0

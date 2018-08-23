@@ -1,11 +1,11 @@
-ITEM.Name = 'Kleiner'
-ITEM.Price = 150
-ITEM.Model = 'models/player/kleiner.mdl'
-ITEM.Team = TEAM_PRISONER
+ITEM.Name = 'Combine Prison Guard'
+ITEM.Price = 300
+ITEM.Model = 'models/player/combine_soldier_prisonguard.mdl'
+ITEM.Team = TEAM_GUARD
 
 function ITEM:OnEquip(ply, modifications)
 	timer.Simple(1, function()
-		ply._prisonermodel = self.Model
+		ply._guardmodel = self.Model
 		if ply:Team() == self.Team then
 			ply:SetModel(self.Model)
 		end 
@@ -13,14 +13,14 @@ function ITEM:OnEquip(ply, modifications)
 end
 
 function ITEM:OnHolster(ply)
-	ply._prisonermodel = nil
+	ply._guardmodel = nil
 	if ply:Team() == self.Team then
 		setmodel()
 	end
 end
 
 function ITEM:PlayerSetModel(ply)
-	ply._prisonermodel = self.Model
+	ply._guardmodel = self.Model
 	if ply:Team() == self.Team then
 		ply:SetModel(self.Model)
 	end
@@ -93,9 +93,9 @@ local prisonerModels = {
 	Model("models/player/Group01/male_09.mdl"),
 }
 function setmodel()
-	print(self.Player._prisonermodel)
-	if self.Player._prisonermodel then
-		self.Player:SetModel(self.Player._prisonermodel)
+	print(self.Player._guardmodel)
+	if self.Player._guardmodel then
+		self.Player:SetModel(self.Player._guardmodel)
 	else
 		self.Player:SetModel( string.lower(table.Random(prisonerModels)) )
 	end

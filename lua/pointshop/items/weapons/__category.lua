@@ -1,3 +1,3 @@
 CATEGORY.Name = 'Weapons'
-CATEGORY.Icon = 'bomb'
-CATEGORY.Order = -1
+CATEGORY.Icon = 'gun'
+CATEGORY.Order = 5

@@ -36,7 +36,7 @@ function PANEL:Paint()
 			render.SetModelLighting( i, col.r/255, col.g/255, col.b/255 )
 		end
 	end
-
+	function self.Entity:GetPlayerColor() return LocalPlayer():GetPlayerColor() end --we need to set it to a Vector not a Color, so the values are normal RGB values divided by 255.
 	self.Entity:DrawModel()
 
 	self:DrawOtherModels()

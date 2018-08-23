@@ -2,7 +2,7 @@ PS.Config = {}
 
 -- Edit below
 
-PS.Config.CommunityName = "My Community"
+PS.Config.CommunityName = "Just An Otter"
 
 PS.Config.DataProvider = 'pdata'
 
@@ -19,14 +19,14 @@ PS.Config.PointsOverTime = true -- Should players be given points over time?
 PS.Config.PointsOverTimeDelay = 1 -- If so, how many minutes apart?
 PS.Config.PointsOverTimeAmount = 10 -- And if so, how many points to give after the time?
 
-PS.Config.AdminCanAccessAdminTab = true -- Can Admins access the Admin tab?
+PS.Config.AdminCanAccessAdminTab = false -- Can Admins access the Admin tab?
 PS.Config.SuperAdminCanAccessAdminTab = true -- Can SuperAdmins access the Admin tab?
 
 PS.Config.CanPlayersGivePoints = true -- Can players give points away to other players?
 PS.Config.DisplayPreviewInMenu = true -- Can players see the preview of their items in the menu?
 
-PS.Config.PointsName = 'Points' -- What are the points called?
-PS.Config.SortItemsBy = 'Name' -- How are items sorted? Set to 'Price' to sort by price.
+PS.Config.PointsName = 'Pennies' -- What are the points called?
+PS.Config.SortItemsBy = 'Price' -- How are items sorted? Set to 'Price' to sort by price.
 
 -- Edit below if you know what you're doing
 

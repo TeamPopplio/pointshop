@@ -3,6 +3,7 @@ ITEM.Price = 200
 ITEM.Model = 'models/weapons/w_shotgun.mdl'
 ITEM.WeaponClass = 'weapon_shotgun'
 ITEM.SingleUse = true
+ITEM.AdminOnly = true
 
 function ITEM:OnBuy(ply)
 	ply:Give(self.WeaponClass)

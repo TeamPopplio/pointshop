@@ -93,6 +93,7 @@ function PS:LoadItems()
 					ITEM.ID = string.gsub(string.lower(name), '.lua', '')
 					ITEM.Category = CATEGORY.Name
 					ITEM.Price = 0
+					ITEM.Team = TEAM_UNASSIGNED
 					
 					-- model and material are missing but there's no way around it, there's a check below anyway
 					
