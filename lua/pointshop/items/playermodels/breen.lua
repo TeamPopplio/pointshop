@@ -1,7 +1,7 @@
 ITEM.Name = 'Dr. Breen'
 ITEM.Price = 250
 ITEM.Model = 'models/player/breen.mdl'
-ITEM.Team = TEAM_PRISONER
+ITEM.Team = 1
 
 function ITEM:OnEquip(ply, modifications)
 	timer.Simple(1, function()

@@ -67,6 +67,7 @@ end
 local PANEL = {}
 
 function PANEL:Init()
+	print(PANEL)
 	self:SetSize(ScrW(), ScrH())
 	self:SetPos((ScrW() / 2) - (self:GetWide() / 2), (ScrH() / 2) - (self:GetTall() / 2))
 	

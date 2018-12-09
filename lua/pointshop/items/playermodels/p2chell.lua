@@ -1,7 +1,7 @@
 ITEM.Name = 'Chell'
 ITEM.Price = 400
 ITEM.Model = 'models/player/p2_chell.mdl'
-ITEM.Team = TEAM_PRISONER
+ITEM.Team = 1
 
 function ITEM:OnEquip(ply, modifications)
 	timer.Simple(1, function()

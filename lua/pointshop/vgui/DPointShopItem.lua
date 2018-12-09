@@ -68,9 +68,7 @@ end
 function PANEL:SetData(data)
 	self.Data = data
 	self.Info = data.Name
-	if data.Team  then
-		self.Team = data.Team
-	end
+
 	if data.Model then
 		local DModelPanel = vgui.Create('DModelPanel', self)
 		DModelPanel:SetModel(data.Model)
@@ -138,6 +136,10 @@ function PANEL:SetData(data)
 	
 	if data.Description then
 		self:SetTooltip(data.Description)
+	elseif self.Data.Team == 1 then
+		self:SetTooltip("This item only functions as a Prisoner.")
+	elseif self.Data.Team == 2 then
+		self:SetTooltip("This item only functions as a Guard.")
 	end
 end
 
@@ -146,11 +148,11 @@ function PANEL:PaintOver()
 		surface.SetMaterial(adminicon)
 		surface.DrawTexturedRect(5, 5, 16, 16)
 	end
-
-	if self.Team == TEAM_PRISONER then
+	print(self.Data.Team.." "..self.Info)
+	if self.Data.Team == 1 then
 		surface.SetMaterial(prisonericon)
 		surface.DrawTexturedRect(self:GetWide() - 5 - 16, self:GetTall() - self.InfoHeight - 5 - 16, 16, 16)
-	elseif self.Team == TEAM_GUARD then
+	elseif self.Data.Team == 2 then
 		surface.SetMaterial(guardicon)
 		surface.DrawTexturedRect(self:GetWide() - 5 - 16, self:GetTall() - self.InfoHeight - 5 - 16, 16, 16)
 	end

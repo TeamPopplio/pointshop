@@ -1,7 +1,7 @@
 ITEM.Name = 'Skeleton'
 ITEM.Price = 700
 ITEM.Model = 'models/player/skeleton.mdl'
-ITEM.Team = TEAM_PRISONER
+ITEM.Team = 1
 
 function ITEM:OnEquip(ply, modifications)
 	timer.Simple(1, function()
@@ -93,7 +93,7 @@ local prisonerModels = {
 	Model("models/player/Group01/male_09.mdl"),
 }
 function setmodel()
-	print(self.Player._prisonermodel)
+	--print(self.Player._prisonermodel)
 	if self.Player._prisonermodel then
 		self.Player:SetModel(self.Player._prisonermodel)
 	else

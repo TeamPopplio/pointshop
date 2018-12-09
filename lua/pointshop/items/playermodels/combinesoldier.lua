@@ -1,7 +1,7 @@
 ITEM.Name = 'Combine Soldier'
 ITEM.Price = 250
 ITEM.Model = 'models/player/combine_soldier.mdl'
-ITEM.Team = TEAM_GUARD
+ITEM.Team = 2
 
 function ITEM:OnEquip(ply, modifications)
 	timer.Simple(1, function()
