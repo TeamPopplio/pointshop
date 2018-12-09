@@ -1,2 +1,3 @@
-CATEGORY.Name = 'Trails'
-CATEGORY.Icon = 'rainbow'
+CATEGORY.Name = 'Effects'
+CATEGORY.Icon = 'water'
+CATEGORY.Order = 2
